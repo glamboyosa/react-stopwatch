@@ -7,6 +7,7 @@
 <video width="390" height="280" controls>
   <source src="./readme-assets/demo.mov" type="video/mp4">
 </video>
+
 ## Install
 
 ```bash
