@@ -4,9 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/@glamboyosa/react-stopwatch.svg)](https://www.npmjs.com/package/@glamboyosa/react-stopwatch) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-<video width="390" height="280" controls>
-  <source src="./readme-assets/demo.mov" type="video/mp4">
-</video>
+![](./readme-assets/demo.mov)
 
 ## Install
 
