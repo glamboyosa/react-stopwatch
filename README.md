@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/@glamboyosa/react-stopwatch.svg)](https://www.npmjs.com/package/@glamboyosa/react-stopwatch) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-![React Timer Demo](demo.mov)
+![React Timer Demo](./readme-assets/demo.mp4)
 
 ## Install
 
