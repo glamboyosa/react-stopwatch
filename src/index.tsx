@@ -1,8 +1,8 @@
 import React, { useCallback, useRef } from 'react'
 import styles from './styles.module.css'
-const Timer = (props: any) => {
+const StopWatch = (props: any) => {
   return (
-    <div className={styles.timer_container} {...props}>
+    <div className={styles.stopwatch_container} {...props}>
       <p id='hours-element'>00:</p>
       <p id='minutes-element'>00:</p>
       <p id='seconds-element'>00</p>
@@ -10,14 +10,14 @@ const Timer = (props: any) => {
   )
 }
 
-const useTimer = (style?: React.CSSProperties) => {
+const useStopwatch = (style?: React.CSSProperties) => {
   const seconds = useRef(0)
   const minutes = useRef(1)
   const hours = useRef(1)
 
   let timeoutReference: NodeJS.Timeout | null = null
 
-  let isTimerStarted = false
+  let isStopwatchStarted = false
   const setHours = () => {
     if (hours.current < 10) {
       document.getElementById('hours-element')!.innerHTML = `0${hours.current}:`
@@ -65,14 +65,14 @@ const useTimer = (style?: React.CSSProperties) => {
     seconds.current += 1
   }
 
-  // start timer
+  // start stopwatch
   const start = useCallback(() => {
-    if (!isTimerStarted) {
+    if (!isStopwatchStarted) {
       const interval = setInterval(setSeconds, 1000)
 
       timeoutReference = interval
 
-      isTimerStarted = true
+      isStopwatchStarted = true
     }
 
     return
@@ -81,17 +81,17 @@ const useTimer = (style?: React.CSSProperties) => {
   const stop = useCallback(() => {
     if (timeoutReference) {
       clearInterval(timeoutReference)
-      isTimerStarted = false
+      isStopwatchStarted = false
     }
   }, [])
 
   return {
     start,
     stop,
-    timerProps: {
-      'aria-label': 'timer-component',
+    stopWatchProps: {
+      'aria-label': 'stopwatch-component',
       style: { ...style }
     }
   }
 }
-export { Timer, useTimer }
+export { StopWatch, useStopwatch }

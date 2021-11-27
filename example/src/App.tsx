@@ -1,17 +1,17 @@
 import React from 'react'
 
-import { Timer, useTimer } from '@glamboyosa/react-stopwatch'
+import { StopWatch, useStopwatch } from '@glamboyosa/react-stopwatch'
 import '@glamboyosa/react-stopwatch/dist/index.css'
 
 const App = () => {
-  const { start, stop, timerProps } = useTimer({
+  const { start, stop, stopWatchProps } = useStopwatch({
     fontSize: '30px',
     justifyContent: 'center',
     alignItems: 'center'
   })
   return (
     <>
-      <Timer {...timerProps} />
+      <StopWatch {...stopWatchProps} />
       <button onClick={start}>Start</button>
       <button onClick={stop}>Stop</button>
     </>

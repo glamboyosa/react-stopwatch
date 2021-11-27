@@ -19,39 +19,39 @@ npm install --save @glamboyosa/react-stopwatch
 yarn add @glamboyosa/react-stopwatch
 ```
 
-This package ships with a custom hook - `useTimer` and a `Timer` component.
+This package ships with a custom hook - `useStopwatch` and a `Stopwatch` component.
 
-## useTimer API
+## useStopwatch API
 
 ```tsx
-const { stop, start, timerProps } = useTimer(style)
+const { stop, start, stopwatchProps } = useStopwatch(style)
 ```
 
-- `style`: An optional React CSS style object and allows you to configure the `<Timer/>` with CSS style properties like `fontSize` etc.
+- `style`: An optional React CSS style object and allows you to configure the `<Stopwatch/>` with CSS style properties like `fontSize` etc.
 
-- `start`: A function that's used to start the timer.
+- `start`: A function that's used to start the stopwatch.
 
-- `stop`: A function that's used to stop the timer.
+- `stop`: A function that's used to stop the stopwatch.
 
-- `timerProps`: A collection of props spread onto the `<Timer/>` component.
+- `stopwatchProps`: A collection of props spread onto the `<Stopwatch/>` component.
 
 ## Usage
 
 ```tsx
 import React from 'react'
 
-import { Timer, useTimer } from '@glamboyosa/react-stopwatch'
+import { Stopwatch, useStopwatch } from '@glamboyosa/react-stopwatch'
 import '@glamboyosa/react-stopwatch/dist/index.css'
 
 const App = () => {
-  const { start, stop, timerProps } = useTimer({
+  const { start, stop, stopwatchProps } = useStopwatch({
     fontSize: '30px',
     justifyContent: 'center',
     alignItems: 'center'
   })
   return (
     <>
-      <Timer {...timerProps} />
+      <Stopwatch {...stopwatchProps} />
       <button onClick={start}>Start</button>
       <button onClick={stop}>Stop</button>
     </>

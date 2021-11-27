@@ -1,6 +1,6 @@
 {
   "name": "@glamboyosa/react-stopwatch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small package that exposes a performant stopwatch UI component and hook.",
   "author": "glamboyosa",
   "license": "MIT",
