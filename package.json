@@ -1,6 +1,6 @@
 {
   "name": "@glamboyosa/react-stopwatch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small package that exposes a performant stopwatch UI component and hook.",
   "author": "glamboyosa",
   "license": "MIT",
@@ -27,7 +27,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0 || ^17.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
